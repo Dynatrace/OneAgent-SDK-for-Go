@@ -27,6 +27,7 @@ This information can then be used, for example, to provide additional context in
 
 |OneAgent SDK for Go  |Minimum OneAgent version |Support status |
 |:--------------------|:------------------------|:--------------|
+|1.0.0                |1.233                    |Supported      |
 |0.1.0                |1.233                    |Not supported  |
 
 ## Integration
