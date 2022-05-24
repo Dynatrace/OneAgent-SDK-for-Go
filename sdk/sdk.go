@@ -12,6 +12,11 @@ type OneAgentSDK interface {
 	// The returned information is not intended for tagging and context-propagation
 	// scenarios and primarily designed for log-enrichment use cases.
 	GetTraceContextInfo() trace.TraceContextInfo
+
+	// GetEnrichmentMetadata returns metadata that can be used to manually enrich
+	// log messages when unsupported logging frameworks are used.
+	// Also see https://www.dynatrace.com/support/help/shortlink/enrich-metrics
+	GetEnrichmentMetadata() map[string]string
 }
 
 // CreateInstance returns an instance of the OneAgent SDK.
