@@ -15,7 +15,7 @@ type OneAgentSDK interface {
 
 	// GetEnrichmentMetadata returns metadata that can be used to manually enrich
 	// log messages when unsupported logging frameworks are used.
-	// Also see https://www.dynatrace.com/support/help/shortlink/enrich-metrics
+	// See also https://www.dynatrace.com/support/help/shortlink/enrich-metrics
 	GetEnrichmentMetadata() map[string]string
 }
 
