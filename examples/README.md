@@ -15,12 +15,13 @@ Sample applications showing how to use Dynatrace OneAgent SDK for Go.
 
 ## TraceContext sample application
 
-This sample shows how to get Trace ID and Span ID information of the current PurePath node.
-Valid Trace ID and Span ID can only be obtained if `GetTraceContextInfo` is executed in context of an active Dynatrace PurePath.
-As an example a simple HTTP server is used, the agent will create a PurePath node which is active while running the HTTP handler.
-Make sure that Go web request monitoring is enabled upon instrumentation of the sample application.
+This sample shows how to get Trace ID and Span ID information of the current PurePath node. Valid Trace ID and Span ID
+can only be obtained if `GetTraceContextInfo` is executed in context of an active Dynatrace PurePath. As an example a
+simple HTTP server is used, the agent will create a PurePath node which is active while running the HTTP handler. Make
+sure that Go web request monitoring is enabled upon instrumentation of the sample application.
 
-Execute the sample and send an HTTP GET request to `http://localhost:8080`, if everything is configured properly you will get a response with valid Trace and Span IDs of the incoming HTTP request:
+Execute the sample and send an HTTP GET request to `http://localhost:8080`, if everything is configured properly you
+will get a response with valid Trace and Span IDs of the incoming HTTP request:
 
 ```text
 Dynatrace TraceContext of the Incoming HTTP Request:
