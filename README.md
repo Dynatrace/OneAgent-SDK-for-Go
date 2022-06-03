@@ -1,7 +1,8 @@
 # Dynatrace OneAgent SDK for Go
 
-OneAgent SDK for Go has to be used together with OneAgent injected. Otherwise, the dummy implementation of OneAgent SDK will be used.
-The current implementation of OneAgent SDK for Go is made with a single purpose: providing access to the Trace ID and Span ID information of the PurePath node.
+OneAgent SDK for Go has to be used together with OneAgent injected. Otherwise, the dummy implementation of OneAgent SDK
+will be used. The current implementation of OneAgent SDK for Go is made with a single purpose: providing access to the
+Trace ID and Span ID information of the PurePath node.
 This information can then be used, for example, to provide additional context in log messages.
 
 ## Table of Contents
@@ -18,29 +19,33 @@ This information can then be used, for example, to provide additional context in
 
 ## Package contents
 
-* `examples`: contains sample application, which demonstrates the usage of the SDK. See readme inside the examples directory for more details.
+* `examples`: contains sample application, which demonstrates the usage of the SDK. See readme inside the directory
+  for more details.
 * `LICENSE`: license under which the whole SDK and sample applications are published.
 
 ## Requirements
 
 * Deep monitoring by Dynatrace OneAgent must be successfully activated.
 
-|OneAgent SDK for Go  |Minimum OneAgent version |Support status |
-|:--------------------|:------------------------|:--------------|
-|1.0.0                |1.233                    |Supported      |
-|0.1.0                |1.233                    |Not supported  |
+| OneAgent SDK for Go | Minimum OneAgent version | Support status |
+|:--------------------|:-------------------------|:---------------|
+| 1.0.0               | 1.233                    | Supported      |
+| 0.1.0               | 1.233                    | Not supported  |
 
 ## Integration
 
-Using this module should not cause any errors if OneAgent is not present (e.g. in testing) since the stub implementation of OneAgent SDK for Go will be used.
+Using this module should not cause any errors if OneAgent is not present (e.g. in testing) since the stub implementation
+of OneAgent SDK for Go will be used.
 
 ### Troubleshooting
 
-If the SDK can not connect to OneAgent, verify that a matching version of OneAgent is used. Check if OneAgent Go log file contains the following log message: `OneAgent SDK has been successfully resolved`.
+If the SDK can not connect to OneAgent, verify that a matching version of OneAgent is used. Check if OneAgent Go log
+file contains the following log message: `OneAgent SDK has been successfully resolved`.
 
 ## API Concepts
 
-Common concepts of the Dynatrace OneAgent SDK are explained in the [Dynatrace OneAgent SDK repository](https://github.com/Dynatrace/OneAgent-SDK).
+Common concepts of the Dynatrace OneAgent SDK are explained in the
+[Dynatrace OneAgent SDK repository](https://github.com/Dynatrace/OneAgent-SDK).
 
 ### OneAgentSDK object
 
@@ -54,9 +59,11 @@ oneagentsdk := sdk.CreateInstance()
 
 ### Trace Context
 
-The obtained OneAgent SDK API instance provides the `GetTraceContextInfo()` method, which returns a `TraceContextInfo` object that provides the Trace ID and Span ID of the current PurePath node.
+The obtained OneAgent SDK API instance provides the `GetTraceContextInfo()` method, which returns a `TraceContextInfo`
+object that provides the Trace ID and Span ID of the current PurePath node.
 `TraceContextInfo.IsValid()` may be used to verify that the Trace ID and Span ID are both valid (non-zero).
-Trace ID and Span ID information is not intended for tagging and context-propagation scenarios and primarily designed for log-enrichment use cases.
+Trace ID and Span ID information is not intended for tagging and context-propagation scenarios and primarily designed
+for log-enrichment use cases.
 
 ```go
 ...
@@ -102,6 +109,6 @@ SLAs apply according to the customer's support level.
 
 see also [Releases](https://github.com/Dynatrace/OneAgent-SDK-for-Go/releases)
 
-|Version|Description                                 |
-|:------|:-------------------------------------------|
-|0.1.0  |Initial Alpha Release                       |
+| Version | Description                                |
+|:--------|:-------------------------------------------|
+| 0.1.0   | Initial Alpha Release                      |
