@@ -8,8 +8,8 @@ Sample applications showing how to use Dynatrace OneAgent SDK for Go.
 
 ## Prepare running sample applications
 
-* Ensure Dynatrace OneAgent is installed. If not see our [free Trial](https://www.dynatrace.com/trial/)
-* Ensure you have [the Go toolchain](https://golang.org "golang") installed
+* Ensure Dynatrace OneAgent is installed. If not see our [free trial](https://www.dynatrace.com/trial/)
+* Ensure you have the [Go toolchain](https://golang.org "golang") installed
 * Clone this repository
 * Execute `go build` in the sample folder
 
